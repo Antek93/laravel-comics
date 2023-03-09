@@ -14,5 +14,42 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $menu = [
+        'Characters',
+        'Comics',
+        'Movies',
+        'Tv',
+        'Games',
+        'Collectibles',
+        'Videos',
+        'Fans',
+        'News',
+        'Shop', 
+    ];
+    return view('home', [
+        'menu' => $menu,
+    ]);
 })->name('home');
+
+
+Route::get('/header', function () {
+    $menu = [
+        'Characters',
+        'Comics',
+        'Movies',
+        'Tv',
+        'Games',
+        'Collectibles',
+        'Videos',
+        'Fans',
+        'News',
+        'Shop', 
+    ];
+    return view('header', [
+        'menu' => $menu,
+    ]);
+})->name('header');
+
+Route::get('/footer', function () {
+    return view('footer');
+})->name('footer');

@@ -1,0 +1,115 @@
+
+.containerPrincipale {
+    width: 100%;
+    height: 51.5vh;
+        .containerIntermedio {
+            width: 100%;
+            height: 81%;
+            
+            background-image: url('../assets/footer-bg.jpg');
+            background-size: contain;
+            .linksLogo {
+                width: 70%;
+                margin: 0 auto;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                color: white;
+                .links {
+                    width: 35%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    ul {
+                        list-style: none;
+                    }
+
+                    li a {
+                        text-decoration: none;
+                        color: gray;
+                        font-family: 'Roboto Condensed', sans-serif;
+                        font-size: 12px;
+                    }
+
+                    
+                    li a:hover {
+                        text-decoration: underline;
+                    }
+                    .big-title {
+                        text-transform: uppercase;
+                        font-size: 15px;
+                        padding-top: 30px;
+                    }
+
+                    .spaced {
+                        margin-top: -9%;
+                    }
+                
+                }
+                .logos {
+                    width: 75%;
+                    position: relative;
+                    overflow: hidden;
+                    
+                    img {
+                        position: absolute;
+                        width: 60%;
+                        bottom: -16%;
+                        left: 30%
+                        
+                        
+                    }
+                }
+            }
+            
+        }
+
+        .signdown {
+            width: 100%;
+            height: 11.9%;
+            background-color: rgb(42, 42, 42);
+            position: absolute;
+            z-index: 2;
+            .boxadvs {
+                width: 70%;
+                height: 100%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .now-btn {
+                    width: calc((100% / 2) - 20px);
+
+                    button {
+                        padding: 15px;
+                        color: white;
+                        background-color: rgb(42, 42, 42);
+                        font-size: 15px;
+                        border: 1px solid rgb(0, 149, 255);
+                    } button:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                .follower-btn {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 10px;
+                    div {
+                        font-size: 18px;
+                        color: rgb(0, 149, 255);
+                        padding: 0px 6px;
+                        display: flex;
+                        justify-content: flex-end;
+                    } img {
+                        width: 80%;
+                    }
+                    div:hover {
+                        cursor: pointer;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }

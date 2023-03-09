@@ -23,14 +23,16 @@
         </style>
     </head>
     <body class="antialiased">
-        <header>
-            
-        </header>
-        <main>
-
-        </main>
-        <footer>
-
-        </footer>
+        <div class="container">
+            <header>
+                @include('header')
+            </header>
+            <main>
+                @yield('content')
+            </main>
+            <footer>
+                @include('footer')
+            </footer>
+        </div>
     </body>
 </html>
