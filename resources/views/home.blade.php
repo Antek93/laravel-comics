@@ -22,13 +22,13 @@
             }
         </style>
     </head>
-    <body class="antialiased">
+    <body>
         <div class="container">
             <header>
                 @include('header')
             </header>
             <main>
-                @yield('content')
+                @yield('contents');
             </main>
             <footer>
                 @include('footer')

@@ -1,35 +1,9 @@
 @extends('home')
-@section('content')
-    
-        <div class="container-b">
-            <!-- MAIN CONTAINER-->
-            <div class="wallpaper"></div>
-            <!--BACKGROUND MAIN - HEROES THEME -->
-            <div class="carousello-container">
-                <!-- CAROUSEL CONTAINER -->
-
-                <div class="carousello">
-                    <!--ACTUAL CAROUSEL-->
-                    @foreach ($info in $datiJason)
-                       <div class="comicon-box">
-                        <!--V-FOR cycling ON datiJason array-->
-                        <img src="info.thumb" alt="">
-                        <div> {{ info.series }}</div>
-                    </div>
-                    @endforeach
-                </div>
-
-                <div class="loadMoreplus">
-                    <!--LOAD MORE BUTTON-->
-                    <button>
-                        Load More
-                    </button>
-                </div>
-            </div>
-
-            <div class="current-tv-series">
-                <!--CURRENT SERIES BADGE-->
-                Current series
+@section('contents')
+    @foreach ($comics as $comic)
+            <div>
+                {{ $comic['title'] }}
             </div>
         </div>
+    @endforeach
 @endsection

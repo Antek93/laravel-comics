@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $comics = config('comics');
     $menu = [
         'Characters',
         'Comics',
@@ -24,32 +25,10 @@ Route::get('/', function () {
         'Videos',
         'Fans',
         'News',
-        'Shop', 
+        'Shop',
     ];
     return view('home', [
         'menu' => $menu,
+        'comics' => $comics,
     ]);
 })->name('home');
-
-
-Route::get('/header', function () {
-    $menu = [
-        'Characters',
-        'Comics',
-        'Movies',
-        'Tv',
-        'Games',
-        'Collectibles',
-        'Videos',
-        'Fans',
-        'News',
-        'Shop', 
-    ];
-    return view('header', [
-        'menu' => $menu,
-    ]);
-})->name('header');
-
-Route::get('/footer', function () {
-    return view('footer');
-})->name('footer');
