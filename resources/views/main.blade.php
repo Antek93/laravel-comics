@@ -10,11 +10,13 @@
 
                 <div class="carousello">
                     <!--ACTUAL CAROUSEL-->
-                    <div v-for="info in datiJason" class="comicon-box">
+                    @foreach ($info in $datiJason)
+                       <div class="comicon-box">
                         <!--V-FOR cycling ON datiJason array-->
-                        <img :src="info.thumb" alt="">
-                        <div> {{ info . series }}</div>
+                        <img src="info.thumb" alt="">
+                        <div> {{ info.series }}</div>
                     </div>
+                    @endforeach
                 </div>
 
                 <div class="loadMoreplus">
